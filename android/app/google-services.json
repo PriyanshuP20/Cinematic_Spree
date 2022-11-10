@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "656913081256",
+    "project_id": "cinematic-spree-14765",
+    "storage_bucket": "cinematic-spree-14765.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656913081256:android:cc16088e26ca5f942fb39d",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656913081256-ticuni83gjktr56ag0fe42d4346153e8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.login",
+            "certificate_hash": "99aa6a29199b316280e3df3f6aab779968251f5d"
+          }
+        },
+        {
+          "client_id": "656913081256-p27teie9mjiqdg7e7k7m61e828flv5r1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXGPe1waWPlFTZfsakS6-7MUcpQncqIXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656913081256-p27teie9mjiqdg7e7k7m61e828flv5r1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
