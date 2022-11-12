@@ -22,5 +22,10 @@ class Assets {
   static const String imagesLogo1 = 'assets/images/logo1.png';
   static const String imagesTogo = 'assets/images/togo.jpeg';
   static const String imagesTogologo = 'assets/images/togologo.png';
+  static const String logoLogo_full = 'assets/images/logo/logo_full.png';
+  static const String logoLogo_text = 'assets/images/logo/logo_text.png';
+  static const String logoLogoBgRemoved = 'assets/images/logo/logo-bg_removed.png';
+  static const String logoLogoSymbol = 'assets/images/logo/logo_symbol.png';
+  static const String logoTextLogoNoBg = 'assets/images/logo/text_logo_no_bg.png';
 
 }

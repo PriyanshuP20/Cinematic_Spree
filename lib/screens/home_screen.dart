@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   Size get size => MediaQuery.of(context).size;
 
-  //to Center the movie List View
+  // to Center the movie List View
   double get movieItemWidth => size.width / 2 +48;
 
   ScrollController backgroundScrollController = ScrollController();

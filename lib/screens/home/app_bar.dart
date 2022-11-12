@@ -18,41 +18,41 @@ class CustomAppBar extends StatelessWidget {
             Container(
               height: size.height * 0.075,
               width: size.width * 0.15,
+              child: Image.asset('assets/images/logo/logo-bg_removed.png'),
+            ),
+
+            Container(
+              height: size.height * 0.078,
+              width: size.width * 0.64,
+              // decoration: BoxDecoration(
+              //     border: Border.all(color: white.withOpacity(0.35)),
+              //     borderRadius: BorderRadius.circular(20.0)),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: appPadding / 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                      Image.asset('assets/images/logo/text_logo_no_bg.png'),
+
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              height: size.height * 0.075,
+              width: size.width * 0.15,
               decoration: BoxDecoration(
                   border: Border.all(
                     color: white.withOpacity(0.35),
                   ),
                   borderRadius: BorderRadius.circular(20.0)),
-              child: Icon(
-                Icons.clear_all_rounded,
+              child: const Icon(
+                Icons.settings_applications_outlined,
                 color: white,
-                size: 30.0,
+                size: 50.0,
               ),
             ),
-            Container(
-              height: size.height * 0.075,
-              width: size.width * 0.7,
-              decoration: BoxDecoration(
-                  border: Border.all(color: white.withOpacity(0.35)),
-                  borderRadius: BorderRadius.circular(20.0)),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: appPadding / 2),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Search Movies',
-                      style: TextStyle(color: white, letterSpacing: 1.0),
-                    ),
-                    Icon(
-                      Icons.search,
-                      size: 30.0,
-                      color: white,
-                    )
-                  ],
-                ),
-              ),
-            )
+
           ],
         ),
       ),
