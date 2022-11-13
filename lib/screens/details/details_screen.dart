@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/data/data.dart';
 
 import 'package:rubber/rubber.dart';
 
@@ -62,6 +63,7 @@ class _DetailScreenState extends State<DetailScreen>
           DetailRubberSheet(widget.movie, rubberSheetScrollController, rubberAnimationSheetController,),
 
           //Buy button
+          // BuyButton(widget.movie.name),
           BuyButton(widget.movie.name),
 
           //Back button
