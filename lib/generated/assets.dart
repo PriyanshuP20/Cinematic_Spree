@@ -16,16 +16,18 @@ class Assets {
   static const String castZira = 'assets/images/cast/zira.jpg';
   static const String imagesApes = 'assets/images/apes.jpeg';
   static const String imagesApeslogo = 'assets/images/apeslogo.png';
+  static const String imagesBarcode = 'assets/images/barcode.png';
   static const String imagesJoker = 'assets/images/joker.jpeg';
   static const String imagesJokerlogo = 'assets/images/jokerlogo.png';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesLogo1 = 'assets/images/logo1.png';
+  static const String imagesQrcode = 'assets/images/qrcode.png';
   static const String imagesTogo = 'assets/images/togo.jpeg';
   static const String imagesTogologo = 'assets/images/togologo.png';
-  static const String logoLogo_full = 'assets/images/logo/logo_full.png';
-  static const String logoLogo_text = 'assets/images/logo/logo_text.png';
   static const String logoLogoBgRemoved = 'assets/images/logo/logo-bg_removed.png';
+  static const String logoLogoFull = 'assets/images/logo/logo_full.png';
   static const String logoLogoSymbol = 'assets/images/logo/logo_symbol.png';
+  static const String logoLogoText = 'assets/images/logo/logo_text.png';
   static const String logoTextLogoNoBg = 'assets/images/logo/text_logo_no_bg.png';
 
 }

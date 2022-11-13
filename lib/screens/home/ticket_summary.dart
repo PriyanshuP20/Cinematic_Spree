@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
+import 'package:login/screens/home/ticket_data.dart';
 import '../signin_screen.dart';
-
+import 'package:ticket_widget/ticket_widget.dart';
 
 
 class TicketSummaryScreen extends StatelessWidget {
@@ -14,12 +15,12 @@ class TicketSummaryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( appBar: AppBar(backgroundColor: Color.fromARGB(255, 75, 135, 225),
       title: const Center(
-        child:Image(image: AssetImage("assets/images/text_logo_no_bg.png")),
+        child:Image(image: AssetImage("assets/images/logo/text_logo_no_bg.png")),
 
       ),
 
       actions: const [
-        Image(image: AssetImage("assets/images/logo-bg_removed.png")),
+        Image(image: AssetImage("assets/images/logo/logo-bg_removed.png")),
 
       ],
     ),
@@ -35,59 +36,33 @@ class TicketSummaryScreen extends StatelessWidget {
                     userName: "Name",
                     userProfilePic:
                     const AssetImage("assets/images/plogo2.png"),
-                    cardActionWidget: SettingsItem(
-                      icons: Icons.edit,
-                      iconStyle: IconStyle(
-                        withBackground: true,
-                        borderRadius: 50,
-                        backgroundColor: Colors.yellow[600],
-                      ),
-                      title: "Modify",
-                      subtitle: "Tap to change your data",
-                      onTap: () {
-
-                      },
-                    ),
+                    // cardActionWidget: SettingsItem(
+                    //   icons: Icons.edit,
+                    //   iconStyle: IconStyle(
+                    //     withBackground: true,
+                    //     borderRadius: 50,
+                    //     backgroundColor: Colors.yellow[600],
+                    //   ),
+                    //   title: "Modify",
+                    //   subtitle: "Tap to change your data",
+                    //   onTap: () {
+                    //
+                    //   },
+                    // ),
                   ),
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SettingsGroup(
-                    items: [
-                      SettingsItem(
-
-                        onTap: () {
-
-                        },
-                        icons: Icons.info_rounded,
-                        iconStyle: IconStyle(
-                          backgroundColor: const Color.fromARGB(255, 217, 38, 101),
-                        ),
-                        title: 'About us',
-                        subtitle: "Learn more about Cinematic Spree",
-                      ),
-                    ],
-                  ),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                 ),
-                // You can add a settings title
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SettingsGroup(
-                    settingsGroupTitle: "Account",
-                    items: [
-                      SettingsItem(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const SignInScreen()),///////////
-                          );
-                        },
-                        icons: Icons.exit_to_app_rounded,
-                        title: "Sign In/Sign Up",
-                      ),
-
-                    ],
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: TicketWidget(
+                    width: 350,
+                    height: 500,
+                    isCornerRounded: true,
+                    padding: EdgeInsets.all(20),
+                    child: TicketData(),
                   ),
                 ),
               ],
