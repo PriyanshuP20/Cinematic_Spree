@@ -15,47 +15,37 @@ class TicketData extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              width: 150.0,
-              height: 25.0,
+              width: 250.0,
+              height: 40.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30.0),
-                border: Border.all(width: 1.0, color: Colors.green),
+                border: Border.all(width: 3.0, color: Colors.purpleAccent),
               ),
               child: const Center(
                 child: Text(
                   'Carnival Cinemas',
-                  style: TextStyle(color: Colors.green),
+                  style: TextStyle(color: Colors.purpleAccent,fontSize: 25,fontWeight: FontWeight.bold),
+
                 ),
               ),
             ),
-            // Row(
-            //   children: const [
-            //     Text(
-            //       'LHR',
-            //       style: TextStyle(
-            //           color: Colors.black, fontWeight: FontWeight.bold),
-            //     ),
-            //     Padding(
-            //       padding: EdgeInsets.only(left: 8.0),
-            //       child: Icon(
-            //         Icons.flight_takeoff,
-            //         color: Colors.pink,
-            //       ),
-            //     ),
-            //     Padding(
-            //       padding: EdgeInsets.only(left: 8.0),
-            //       child: Text(
-            //         'ISL',
-            //         style: TextStyle(
-            //             color: Colors.black, fontWeight: FontWeight.bold),
-            //       ),
-            //     )
-            //   ],
-            // )
+            Row(
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: Icon(
+                    Icons.movie,
+                    color: Colors.deepOrange,
+                    size: 30,
+                  ),
+                ),
+
+              ],
+            )
           ],
         ),
         const Padding(
-          padding: EdgeInsets.only(top: 20.0),
+          padding: EdgeInsets.only(top: 30.0),
           child: Text(
             'Movie Ticket',
             style: TextStyle(

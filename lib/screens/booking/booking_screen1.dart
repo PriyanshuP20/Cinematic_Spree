@@ -15,17 +15,17 @@ import 'location_text.dart';
 
 
 
-class BookingScreen extends StatefulWidget {
+class BookingScreen1 extends StatefulWidget {
 
   final String movieName;
 
-  BookingScreen({required this.movieName});
+  BookingScreen1({required this.movieName});
 
   @override
-  _BookingScreenState createState() => _BookingScreenState();
+  _BookingScreen1State createState() => _BookingScreen1State();
 }
 
-class _BookingScreenState extends State<BookingScreen> {
+class _BookingScreen1State extends State<BookingScreen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
