@@ -31,7 +31,7 @@ class _SeatSelectorState extends State<SeatSelector> {
         children: <Widget>[
           for (int i = 0; i < 6; i++)
             Container(
-              margin: EdgeInsets.only(top: i == 3 ? size.height * .02 : 0),
+              margin: EdgeInsets.only(top: i == 3 ? size.height * .025 : 0),
               child: Row(
                 children: <Widget>[
                   for (int x = 0; x < 9; x++)
@@ -44,10 +44,13 @@ class _SeatSelectorState extends State<SeatSelector> {
                           (x == 4)
                           ? Container()
                           : Container(
+
                         height: size.width / 11 - 10,
                         margin: const EdgeInsets.all(5),
                         child: _chairStatus[i][x - 1] == 1
-                            ? BuildChairs.availableChair()
+                            ? BuildChairs.availableChair(
+
+                        )
                             : _chairStatus[i][x - 1] == 2
                             ? BuildChairs.selectedChair()
                             : BuildChairs.reservedChair(),

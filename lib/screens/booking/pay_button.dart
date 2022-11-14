@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../data/constants.dart';
+import '../../utils/razor_pay.dart';
 
 class PayButton extends StatelessWidget {
   @override
@@ -27,7 +28,7 @@ class PayButton extends StatelessWidget {
                         border: Border.all(color: white),
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Available",
                       style: TextStyle(
                         fontSize: 12,
@@ -48,7 +49,7 @@ class PayButton extends StatelessWidget {
                         color: white
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Resvered",
                       style: TextStyle(
                         fontSize: 12,
@@ -69,7 +70,7 @@ class PayButton extends StatelessWidget {
                           color: primary
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Selected",
                       style: TextStyle(
                         fontSize: 12,
@@ -105,7 +106,15 @@ class PayButton extends StatelessWidget {
                 // shape: RoundedRectangleBorder(
                 //   borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0))
                 // ),
-                onPressed: (){},
+
+                onPressed: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                        RazorPay(),
+                      ));
+                },
                 child: Container(
                   width: size.width * 0.45,
                   height: size.width * 0.08,

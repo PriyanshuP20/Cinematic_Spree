@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:login/screens/Settings/setting_screen.dart';
+import 'package:login/screens/booking/booking_srcn.dart';
 
 import '../../data/constants.dart';
 
@@ -46,11 +48,10 @@ class CustomAppBar extends StatelessWidget {
                     color: white.withOpacity(0.35),
                   ),
                   borderRadius: BorderRadius.circular(20.0)),
-              child: const Icon(
-                Icons.settings_applications_outlined,
-                color: white,
-                size: 50.0,
-              ),
+              child: IconButton(onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => const SettingScreen())),
+                icon: Icon(Icons.settings),),
+
             ),
 
           ],

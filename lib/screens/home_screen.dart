@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: black,
       body: Stack(
         alignment: Alignment.bottomCenter,
-        children: [
+        children:[
           //Background of home screen
           BackgroundListView(backgroundScrollController),
 

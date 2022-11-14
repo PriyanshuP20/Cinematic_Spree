@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 import '../../data/constants.dart';
-import '../booking/booking_screen.dart';
+
+import '../booking/booking_srcn.dart';
 
 class BuyButton extends StatefulWidget {
   final String movieName;
@@ -38,7 +39,7 @@ class _BuyButtonState extends State<BuyButton> {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      BookingScreen(movieName: widget.movieName),
+                      const BookingScreen(),
                 ));
           },
           child: const Text(
