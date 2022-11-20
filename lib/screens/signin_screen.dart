@@ -102,20 +102,20 @@ class _SignInScreenState extends State<SignInScreen> {
 
 
 
-  // Widget forgetPassword(BuildContext context) {
-  //   return Container(
-  //     width: MediaQuery.of(context).size.width,
-  //     height: 35,
-  //     alignment: Alignment.bottomRight,
-  //     child: TextButton(
-  //       child: const Text(
-  //         "Forgot Password?",
-  //         style: TextStyle(color: Colors.white70),
-  //         textAlign: TextAlign.right,
-  //       ),
-  //       onPressed: () => Navigator.push(
-  //           context, MaterialPageRoute(builder: (context) => SignUpScreen())),
-  //     ),
-  //   );
-  // }
+  Widget forgetPassword(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 35,
+      alignment: Alignment.bottomRight,
+      child: TextButton(
+        child: const Text(
+          "Forgot Password?",
+          style: TextStyle(color: Colors.white70),
+          textAlign: TextAlign.right,
+        ),
+        onPressed: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SignUpScreen())),
+      ),
+    );
+  }
 }
