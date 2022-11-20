@@ -3,11 +3,6 @@ import 'package:booking_calendar/booking_calendar.dart';
 import 'package:login/screens/maps/maps.dart';
 import 'package:login/utils/razor_pay.dart';
 
-// void main() {
-//   initializeDateFormatting()
-//       .then((_) => runApp(const BookingCalendarDemoApp()));
-// }
-
 class BookingScreen extends StatefulWidget {
   const BookingScreen({Key? key}) : super(key: key);
 
