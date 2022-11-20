@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:booking_calendar/booking_calendar.dart';
-import 'package:intl/date_symbol_data_local.dart';
+import 'package:login/screens/maps/maps.dart';
 import 'package:login/utils/razor_pay.dart';
 
 // void main() {
@@ -26,9 +26,9 @@ class _BookingScreenState extends State<BookingScreen> {
     // DateTime.now().endOfDay
     mockBookingService = BookingService(
         serviceName: 'Mock Service',
-        serviceDuration: 250,
-        bookingEnd: DateTime(now.year, now.month, now.day, 23, 0),
-        bookingStart: DateTime(now.year, now.month, now.day, 10, 0));
+        serviceDuration: 210,
+        bookingEnd: DateTime(now.year, now.month, now.day, 24, 0),
+        bookingStart: DateTime(now.year, now.month, now.day, 9, 0));
   }
 
   Stream<dynamic>? getBookingStreamMock(
@@ -51,11 +51,11 @@ class _BookingScreenState extends State<BookingScreen> {
     ///take care this is only mock, so if you add today as disabledDays it will still be visible on the first load
     ///disabledDays will properly work with real data
     DateTime first = now;
-    DateTime second = now.add(const Duration(minutes: 55));
+    DateTime second = now.add(const Duration(minutes: 60));
     DateTime third = now.subtract(const Duration(minutes: 240));
     DateTime fourth = now.subtract(const Duration(minutes: 500));
     converted.add(
-        DateTimeRange(start: first, end: now.add(const Duration(minutes: 30))));
+        DateTimeRange(start: first, end: now.add(const Duration(minutes: 40))));
     converted.add(DateTimeRange(
         start: second, end: second.add(const Duration(minutes: 23))));
     converted.add(DateTimeRange(
@@ -80,10 +80,35 @@ class _BookingScreenState extends State<BookingScreen> {
         // theme: ThemeData(
         //   primarySwatch: Colors.blue,
         // ),
-        // home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Booking Pannel'),
-          ),
+         body: Scaffold(
+        //   appBar: AppBar(
+        //     title: const Text('Booking Pannel'),
+        //     actionsIconTheme: ,
+        //   ),
+        appBar: AppBar(
+          title: const Text("Booking Panel"),
+
+          actions: <Widget>[
+            Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const MapsPage(),
+                        ));
+                  },
+                  child: const Icon(
+                    Icons.location_on,
+                    size: 26.0,
+                  ),
+                )
+            ),
+
+          ],
+        ),
           body: Center(
 
             child: BookingCalendar(
@@ -120,7 +145,7 @@ class _BookingScreenState extends State<BookingScreen> {
         ),
       )
 
-        );
+        ));
 
   }
 }

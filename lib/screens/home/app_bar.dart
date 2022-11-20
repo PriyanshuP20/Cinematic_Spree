@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:login/screens/Settings/setting_screen.dart';
-import 'package:login/screens/booking/booking_srcn.dart';
 
 import '../../data/constants.dart';
 
@@ -17,11 +16,26 @@ class CustomAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              height: size.height * 0.075,
-              width: size.width * 0.15,
-              child: Image.asset('assets/images/logo/logo-bg_removed.png'),
+            GestureDetector(
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => MainWidget()),
+              //   );
+              // },
+              child: Container(
+                height: size.height * 0.075,
+                width: size.width * 0.15,
+                child: Image.asset('assets/images/logo/logo-bg_removed.png'),
+
+              ),
             ),
+            // Container(
+            //   height: size.height * 0.075,
+            //   width: size.width * 0.15,
+            //   child: Image.asset('assets/images/logo/logo-bg_removed.png'),
+            //
+            // ),
 
             Container(
               height: size.height * 0.078,
@@ -45,12 +59,12 @@ class CustomAppBar extends StatelessWidget {
               width: size.width * 0.15,
               decoration: BoxDecoration(
                   border: Border.all(
-                    color: white.withOpacity(0.35),
+                    color: white.withOpacity(0.75),
                   ),
                   borderRadius: BorderRadius.circular(20.0)),
               child: IconButton(onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => const SettingScreen())),
-                icon: Icon(Icons.settings),),
+                icon: Icon(Icons.settings, size: 30,), color: Colors.white, hoverColor: Colors.green, ),
 
             ),
 

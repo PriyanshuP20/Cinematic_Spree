@@ -21,13 +21,13 @@ class _BackgroundListViewState extends State<BackgroundListView> {
 
     Size size = MediaQuery.of(context).size;
 
-    return ListView.builder(
-      controller: widget.backgroundScrollController,
-      padding: EdgeInsets.zero,
-      reverse: true,
-      itemCount: movieData.movieList.length,
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (ctx, index) {
+    // return ListView.builder(
+    //   controller: widget.backgroundScrollController,
+    //   padding: EdgeInsets.zero,
+    //   reverse: true,
+    //   itemCount: movieData.movieList.length,
+    //   scrollDirection: Axis.horizontal,
+    //   itemBuilder: (ctx, index) {
         return Container(
           width: size.width,
           height: size.height,
@@ -35,23 +35,24 @@ class _BackgroundListViewState extends State<BackgroundListView> {
             alignment: Alignment.topCenter,
             children: <Widget>[
               Positioned(
-                left: -size.width / 3,
-                right: -size.width / 3,
+                left: -size.width / 1.8,
+                right: -size.width /1.8,
+                bottom: -size.height/4,
                 child: Image(
-                  image: movieData.movieList[index].image.image,
+                  image: AssetImage('assets/images/background.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
               Container(
-                color: black.withOpacity(.4),
+                color: black.withOpacity(.1),
               ),
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                       colors: [
                         // black.withOpacity(.9),
-                        black.withOpacity(.3),
-                        black.withOpacity(.95)
+                        black.withOpacity(.25),
+                        black.withOpacity(.9)
                       ],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -61,7 +62,7 @@ class _BackgroundListViewState extends State<BackgroundListView> {
             ],
           ),
         );
-      },
-    );
-  }
+      }
+  //   );
+  // }
 }

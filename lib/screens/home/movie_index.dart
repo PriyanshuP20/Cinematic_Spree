@@ -142,7 +142,7 @@ class _MovieIndexState extends State<MovieIndex> {
                   color: secondary,
                   borderRadius: BorderRadius.circular(10.0)
               ),
-              child: Center(child: Text('BUY TICKET', style: TextStyle(
+              child: const Center(child: Text('BUY TICKET', style: TextStyle(
                 color: white,
                 fontWeight: FontWeight.bold,
               ),)),

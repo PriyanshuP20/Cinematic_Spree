@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:login/screens/resetPassword_screen.dart';
+
 import 'package:login/screens/signup_screen.dart';
+import '../reusuable_widgets/header.dart';
 import '../reusuable_widgets/reusuable_widgets.dart';
 import '../utils/colours_utils.dart';
 import 'home_screen.dart';
@@ -20,26 +21,37 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Container(
+
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
+
             gradient: LinearGradient(
           colors: [
-            hexStringToColor("CB2B93"),
-            hexStringToColor("9546C4"),
-            hexStringToColor("5E61F4")
+            // hexStringToColor("04619F"),
+            hexStringToColor("#923CB5"),
+            hexStringToColor("#000000"),
+
+
+            // hexStringToColor("5E61F4")
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         )),
         child: SingleChildScrollView(
-          child: Padding(
+          child: Column(
+              children: <Widget>[
+                HeaderLoginFive(),
+            Padding(
             padding: EdgeInsets.fromLTRB(
-                20, MediaQuery.of(context).size.height * 0.2, 20, 0),
+                20, MediaQuery.of(context).size.height * 0, 20, 0),
             child: Column(
               children: <Widget>[
-                logoWidget("assets/images/logo1.png"),
+
+                logoWidget("assets/images/logo/logo-bg_removed.png"),
+                Image.asset("assets/images/logo/text_logo_no_bg.png"),
                 const SizedBox(
                   height: 30,
                 ),
@@ -59,9 +71,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   });
                 }),
                 signUpOption(),
+
               ],
             ),
-          ),
+          ),])
         ),
       ),
     );
@@ -81,25 +94,28 @@ class _SignInScreenState extends State<SignInScreen> {
             " Sign Up",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
-        )
+        ),
+
       ],
     );
   }
 
-  Widget forgetPassword(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: 35,
-      alignment: Alignment.bottomRight,
-      child: TextButton(
-        child: const Text(
-          "Forgot Password?",
-          style: TextStyle(color: Colors.white70),
-          textAlign: TextAlign.right,
-        ),
-        onPressed: () => Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ResetPassword())),
-      ),
-    );
-  }
+
+
+  // Widget forgetPassword(BuildContext context) {
+  //   return Container(
+  //     width: MediaQuery.of(context).size.width,
+  //     height: 35,
+  //     alignment: Alignment.bottomRight,
+  //     child: TextButton(
+  //       child: const Text(
+  //         "Forgot Password?",
+  //         style: TextStyle(color: Colors.white70),
+  //         textAlign: TextAlign.right,
+  //       ),
+  //       onPressed: () => Navigator.push(
+  //           context, MaterialPageRoute(builder: (context) => SignUpScreen())),
+  //     ),
+  //   );
+  // }
 }

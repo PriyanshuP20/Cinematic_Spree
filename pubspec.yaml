@@ -53,6 +53,11 @@ dependencies:
   ticket_widget: ^0.0.1
   booking_calendar: ^1.1.6
   contactus: ^1.2.0
+  google_maps_flutter: ^2.2.1
+  font_awesome_flutter: ^10.2.1
+  simple_animations: ^5.0.0+2
+  google_fonts: ^3.0.1
+
 
 dev_dependencies:
   flutter_test:
