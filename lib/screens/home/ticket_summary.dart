@@ -24,6 +24,7 @@ class TicketSummaryScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
             child: Container(
+            height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(
                   begin: Alignment.topRight,
@@ -57,19 +58,8 @@ class TicketSummaryScreen extends StatelessWidget {
                         child: TicketData(),
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: TicketWidget(
-                        width: 350,
-                        height: 500,
-                        isCornerRounded: true,
-                        padding: EdgeInsets.all(20),
-                        child: TicketData(),
-                      ),
-                    ),
+                    
+                   
                   ],
                 ))));
 
