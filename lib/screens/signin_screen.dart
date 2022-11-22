@@ -16,7 +16,9 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  TextEditingController _emailTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController(
+
+  );
   TextEditingController _passwordTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -64,12 +66,22 @@ class _SignInScreenState extends State<SignInScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                firebaseUIButton(context, "Sign In", (){
-                  FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailTextController.text, password: _passwordTextController.text).then((value) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomePage()));
-                  });
-                }),
+
+              firebaseUIButton(context, "Sign In", () async {
+                try {
+                  await FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailTextController.text, password: _passwordTextController.text)
+                        .then((value) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    }
+                    );
+                } on FirebaseAuthException catch (e) {
+
+                        _showDialog1(context, e.code);
+
+                   }
+                }
+              ),
                 signUpOption(),
 
               ],
@@ -77,6 +89,26 @@ class _SignInScreenState extends State<SignInScreen> {
           ),])
         ),
       ),
+    );
+  }
+
+  Future _showDialog1(BuildContext context, String a) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Alert'),
+          content: Text(a),
+          actions: <Widget>[
+            ElevatedButton(
+              child: Text('Ok'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      },
     );
   }
   Row signUpOption() {
@@ -100,8 +132,6 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-
-    //jhghjn
   Widget forgetPassword(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
