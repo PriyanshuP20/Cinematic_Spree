@@ -28,6 +28,17 @@ class SettingScreen extends StatelessWidget {
             Image(image: AssetImage("assets/images/logo/logo-bg_removed.png")),
           ],
         ),
+      body:Container(
+        decoration:BoxDecoration(
+          gradient :LinearGradient(
+            colors: [Colors.orange,
+            Colors.blueGrey,],
+            begin: Alignment.topCenter,
+            end:Alignment.bottomCenter, 
+          )
+        )
+
+      )
         backgroundColor: Color.fromARGB(255, 75, 135, 225),
         body: SingleChildScrollView(
             child: Column(
@@ -42,7 +53,7 @@ class SettingScreen extends StatelessWidget {
               child: BigUserCard(
                 cardColor: Color.fromARGB(255, 58, 19, 232),
                 userName: "Name",
-                userProfilePic: const AssetImage("assets/images/plogo2.png"),
+                userProfilePic: const AssetImage("assets/images/logo/logo-bg_removed.png"),
                 cardActionWidget: SettingsItem(
                   icons: Icons.edit,
                   iconStyle: IconStyle(
@@ -75,8 +86,7 @@ class SettingScreen extends StatelessWidget {
                     },
                     icons: Icons.info_rounded,
                     iconStyle: IconStyle(
-                      backgroundColor: const Color.fromARGB(255, 217, 38, 101),
-                    ),
+                      backgroundColor: Color.fromARGB(255, 38, 71, 217)                 ),
                     title: 'About us',
                     subtitle: "Learn more about Cinematic Spree",
                   ),

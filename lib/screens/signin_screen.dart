@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'package:login/screens/signup_screen.dart';
+import 'package:login/screens/signup_screen.dart'; 
 import '../reusuable_widgets/header.dart';
 import '../reusuable_widgets/reusuable_widgets.dart';
 import '../utils/colours_utils.dart';
