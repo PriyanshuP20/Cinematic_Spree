@@ -4,6 +4,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
+import 'package:login/screens/home/Privacy_policy.dart';
 import 'package:login/utils/colours_utils.dart';
 import '../booking/custom_app_bar.dart';
 import '../signin_screen.dart';
@@ -114,6 +115,28 @@ class SettingScreen extends StatelessWidget {
                 ],
               ),
             ),
+             Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SettingsGroup(
+                    items: [
+                      SettingsItem(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ReturnPolicy()),
+                          );
+                        },
+                        icons: Icons.lock_outline_rounded,
+                        iconStyle: IconStyle(
+                            backgroundColor: Color.fromARGB(255, 223, 10, 10)                 ),
+                        title: 'Privacy Policy',
+                        
+                      ),
+                    ],
+                  ),
+                ),
+
+
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SettingsGroup(
@@ -125,9 +148,9 @@ class SettingScreen extends StatelessWidget {
                             MaterialPageRoute(builder: (context) => contact()),
                           );
                         },
-                        icons: Icons.info_rounded,
+                        icons: Icons.mail_rounded,
                         iconStyle: IconStyle(
-                            backgroundColor: Color.fromARGB(255, 38, 71, 217)                 ),
+                            backgroundColor: Color.fromARGB(255, 218, 224, 25)                 ),
                         title: 'Contact Us',
                         subtitle: "Get in touch to know more.",
                       ),
@@ -165,8 +188,13 @@ class SettingScreen extends StatelessWidget {
                     title: "Sign In/Sign Up",
                   ),
                 ],
+
+
               ),
             ),
+
+
+           
 
           ],
         ))
