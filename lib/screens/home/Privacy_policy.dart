@@ -1,16 +1,17 @@
-
 import 'package:flutter/material.dart';
-import 'package:login/screens/Settings/setting_screen.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
 import '../../utils/colours_utils.dart';
 
-class AboutUs extends StatefulWidget {
-  const AboutUs({Key? key}) : super(key: key);
+class ReturnPolicy extends StatefulWidget {
+  const ReturnPolicy({super.key});
 
   @override
-  State<AboutUs> createState() => _AboutUsState();
+  State<ReturnPolicy> createState() => _ReturnPolicyState();
 }
 
-class _AboutUsState extends State<AboutUs> {
+class _ReturnPolicyState extends State<ReturnPolicy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,7 @@ class _AboutUsState extends State<AboutUs> {
             appBar: AppBar(
               backgroundColor: Color.fromRGBO(82, 173, 100, 0.5),
               automaticallyImplyLeading: false,
-              title: const Center(child: Text('About Us')),
+              title: const Center(child: Text('Policy Privacy')),
               leading: new IconButton(
                   icon: new Icon(
                     Icons.arrow_back,
@@ -71,20 +72,21 @@ class _AboutUsState extends State<AboutUs> {
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height / 2,
+                          height: MediaQuery.of(context).size.height / 2.5,
                           decoration: BoxDecoration(
                               color: Colors.white54,
                               border: Border.all(
                                   color: Colors.purpleAccent, width: 2)),
                           child: Padding(
                               padding: const EdgeInsets.all(10),
-
-                              child: Column(
+                              child: SingleChildScrollView(
+                                child: 
+                              Column(
 
                                 children: [
 
                                 Text(
-                                  "At Cinematic Spree, our aim is to offer you seamless movie ticket booking experience.",
+                                  "Privacy Policy",
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontFamily: 'Courier',
@@ -96,13 +98,20 @@ class _AboutUsState extends State<AboutUs> {
                                      textScaleFactor: 1.5,
                                 ),
                                   SizedBox(
-                                    height: 10,
+                                    height: 15,
                                   )
                                   ,
+                                
                                   Text(
-                                      "This project aims to develop a back-end application for a movie ticket booking app using a graphical user interface. It allows for a flexible and user-friendly ticket booking interface. ",
+                                    "Cinematic Spree built the Cinematic Spree app as an Open Source app. This SERVICE "
+                                      "is provided by Cinematic Spree at no cost and is intended for use as is."
+                                   
+                                   "This page is used to inform visitors regarding our policies with the collection, use, "
+                                   "and disclosure of Personal Information if anyone decided to use our Service."
+                                  "If you choose to use our Service, then you agree to the collection and use of information in relation to this policy"
+                                  "The Personal Information that we collect is used for providing and improving the Service.",
                                       style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 18,
                                         fontWeight: FontWeight.w500,
                                         fontFamily: 'Courier',
                                       color: Colors.black,
@@ -114,7 +123,7 @@ class _AboutUsState extends State<AboutUs> {
 
 
 
-                                    ])),
+                                    ]))),
                         )
                       ],
                     )))));
