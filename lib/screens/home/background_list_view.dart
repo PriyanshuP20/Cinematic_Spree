@@ -18,16 +18,7 @@ class _BackgroundListViewState extends State<BackgroundListView> {
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
-
-    // return ListView.builder(
-    //   controller: widget.backgroundScrollController,
-    //   padding: EdgeInsets.zero,
-    //   reverse: true,
-    //   itemCount: movieData.movieList.length,
-    //   scrollDirection: Axis.horizontal,
-    //   itemBuilder: (ctx, index) {
         return Container(
           width: size.width,
           height: size.height,
@@ -43,14 +34,11 @@ class _BackgroundListViewState extends State<BackgroundListView> {
                   fit: BoxFit.cover,
                 ),
               ),
-              Container(
-                color: black.withOpacity(.1),
-              ),
+              Container(color: black.withOpacity(.1),),
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                       colors: [
-                        // black.withOpacity(.9),
                         black.withOpacity(.25),
                         black.withOpacity(.9)
                       ],

@@ -42,9 +42,6 @@ class _BookingScreenState extends State<BookingScreen> {
   List<DateTimeRange> converted = [];
 
   List<DateTimeRange> convertStreamResultMock({required dynamic streamResult}) {
-    ///here you can parse the streamresult and convert to [List<DateTimeRange>]
-    ///take care this is only mock, so if you add today as disabledDays it will still be visible on the first load
-    ///disabledDays will properly work with real data
     DateTime first = now;
     DateTime second = now.add(const Duration(minutes: 60));
     DateTime third = now.subtract(const Duration(minutes: 240));

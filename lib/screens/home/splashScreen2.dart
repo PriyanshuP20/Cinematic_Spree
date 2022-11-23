@@ -25,23 +25,16 @@ class _SplashScreenState extends State<SplashScreen> {
         setState(() {});
       })
       ..setVolume(0.0);
-
     _playVideo();
 
   }
 
   void _playVideo() async {
-    // playing video
     _controller.play();
-
-    //add delay till video is complite
     await Future.delayed(const Duration(seconds: 2));
+    Navigator.pushReplacement(context,
+    MaterialPageRoute(builder: ((context) => SignInScreen())));
 
-    // // navigating to home screen
-    // Navigator.pushNamed(context,'signin_screen');
-Navigator.pushReplacement(context, 
-MaterialPageRoute(builder: ((context) => SignInScreen())));
-  
   }
 
   @override

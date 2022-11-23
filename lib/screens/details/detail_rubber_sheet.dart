@@ -138,9 +138,7 @@ class _DetailRubberSheetState extends State<DetailRubberSheet> {
                           StarRating(widget.movie.rating),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBox(height: 8.0,),
                       Text(
                         'Director : ' + widget.movie.director,
                         textAlign: TextAlign.center,
@@ -160,10 +158,7 @@ class _DetailRubberSheetState extends State<DetailRubberSheet> {
                         ),
                       ),
 
-                      //Function to show actors or cast
-
                       _cast(widget.movie.castList),
-
                       Text(
                         'Story Line',
                         style: TextStyle(

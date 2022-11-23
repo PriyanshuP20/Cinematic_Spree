@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:babstrap_settings_screen/babstrap_settings_screen.dart';
 import 'package:login/screens/home/ticket_data.dart';
-import '../signin_screen.dart';
 import 'package:ticket_widget/ticket_widget.dart';
 
 class TicketSummaryScreen extends StatelessWidget {
@@ -24,6 +22,7 @@ class TicketSummaryScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
             child: Container(
+              height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(
                   begin: Alignment.topRight,
@@ -57,19 +56,7 @@ class TicketSummaryScreen extends StatelessWidget {
                         child: TicketData(),
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: TicketWidget(
-                        width: 350,
-                        height: 500,
-                        isCornerRounded: true,
-                        padding: EdgeInsets.all(20),
-                        child: TicketData(),
-                      ),
-                    ),
+
                   ],
                 ))));
 

@@ -10,25 +10,18 @@ class RazorPay extends StatefulWidget {
 }
 
 class _RazorPayState extends State<RazorPay> {
-
   int _counter = 0;
-
   void _incrementCounter() {
     setState(() {
-
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
       body: Center(
-
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(

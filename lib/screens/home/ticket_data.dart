@@ -24,8 +24,8 @@ class TicketData extends StatelessWidget {
               child: const Center(
                 child: Text(
                   'Carnival Cinemas',
-                  style: TextStyle(color: Colors.purpleAccent,fontSize: 25,fontWeight: FontWeight.bold),
-
+                  style: TextStyle(color: Colors.purpleAccent,
+                      fontSize: 25,fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -39,7 +39,6 @@ class TicketData extends StatelessWidget {
                     size: 30,
                   ),
                 ),
-
               ],
             )
           ],
@@ -96,8 +95,7 @@ Widget ticketDetailsWidget(String firstTitle, String firstDesc,
     children: [
       Padding(
         padding: const EdgeInsets.only(left: 12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column( crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               firstTitle,
@@ -105,33 +103,21 @@ Widget ticketDetailsWidget(String firstTitle, String firstDesc,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 4.0),
-              child: Text(
-                firstDesc,
+              child: Text( firstDesc,
                 style: const TextStyle(color: Colors.black),
-              ),
-            )
-          ],
-        ),
+              ),)],),
       ),
       Padding(
         padding: const EdgeInsets.only(right: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              secondTitle,
+            Text( secondTitle,
               style: const TextStyle(color: Colors.grey),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 4.0),
-              child: Text(
-                secondDesc,
+              child: Text( secondDesc,
                 style: const TextStyle(color: Colors.black),
-              ),
-            )
-          ],
-        ),
-      )
-    ],
-  );
+              ),)],),)],);
 }
