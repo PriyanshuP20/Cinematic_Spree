@@ -8,6 +8,7 @@ import 'package:login/utils/colours_utils.dart';
 import '../booking/custom_app_bar.dart';
 import '../signin_screen.dart';
 import 'about_us.dart';
+import 'contact_us.dart';
 import 'edit_profile.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -21,6 +22,15 @@ class SettingScreen extends StatelessWidget {
 
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 75, 135, 225),
+          leading: new IconButton(
+              icon: new Icon(
+                Icons.arrow_back,
+                color: Color.fromARGB(255, 23, 225, 9),
+                size: 35,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              }),
           title: const Center(
             child:
                 Image(image: AssetImage("assets/images/logo/text_logo_no_bg.png")),
@@ -65,22 +75,22 @@ class SettingScreen extends StatelessWidget {
                 cardColor: Color.fromARGB(255, 58, 19, 232),
                 userName: "Name",
                 userProfilePic: const AssetImage("assets/images/logo/logo-bg_removed.png"),
-                cardActionWidget: SettingsItem(
-                  icons: Icons.edit,
-                  iconStyle: IconStyle(
-                    withBackground: true,
-                    borderRadius: 50,
-                    backgroundColor: Colors.yellow[600],
-                  ),
-                  title: "Modify",
-                  subtitle: "Tap to change your data",
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SettingsUI()),
-                    );
-                  },
-                ),
+                // cardActionWidget: SettingsItem(
+                //   icons: Icons.edit,
+                //   iconStyle: IconStyle(
+                //     withBackground: true,
+                //     borderRadius: 50,
+                //     backgroundColor: Colors.yellow[600],
+                //   ),
+                //   title: "Modify",
+                //   subtitle: "Tap to change your data",
+                //   onTap: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(builder: (context) => SettingsUI()),
+                //     );
+                //   },
+                // ),
               ),
             ),
 
@@ -92,7 +102,7 @@ class SettingScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => about()),
+                        MaterialPageRoute(builder: (context) => AboutUs()),
                       );
                     },
                     icons: Icons.info_rounded,
@@ -104,10 +114,30 @@ class SettingScreen extends StatelessWidget {
                 ],
               ),
             ),
-            // You can add a settings title
-            SizedBox(
-              height: 30,
-            ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SettingsGroup(
+                    items: [
+                      SettingsItem(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => contact()),
+                          );
+                        },
+                        icons: Icons.info_rounded,
+                        iconStyle: IconStyle(
+                            backgroundColor: Color.fromARGB(255, 38, 71, 217)                 ),
+                        title: 'Contact Us',
+                        subtitle: "Get in touch to know more.",
+                      ),
+                    ],
+                  ),
+                ),
+                // You can add a settings title
+                SizedBox(
+                  height: 30,
+                ),
             SizedBox(
               child: Text(
                 "Account",
@@ -143,84 +173,6 @@ class SettingScreen extends StatelessWidget {
         ),
 
       );
-        // backgroundColor: Color.fromARGB(255, 75, 135, 225),
-        // body: SingleChildScrollView(
-            
-        //     child: Column(
-        //       children: [
-
-        //        SizedBox(
-        //         height: 10,
-        //     ),
-
-        //     Padding(
-        //       padding: const EdgeInsets.all(8.0),
-        //       child: BigUserCard(
-        //         cardColor: Color.fromARGB(255, 58, 19, 232),
-        //         userName: "Name",
-        //         userProfilePic: const AssetImage("assets/images/logo/logo-bg_removed.png"),
-        //         cardActionWidget: SettingsItem(
-        //           icons: Icons.edit,
-        //           iconStyle: IconStyle(
-        //             withBackground: true,
-        //             borderRadius: 50,
-        //             backgroundColor: Colors.yellow[600],
-        //           ),
-        //           title: "Modify",
-        //           subtitle: "Tap to change your data",
-        //           onTap: () {
-        //             Navigator.push(
-        //               context,
-        //               MaterialPageRoute(builder: (context) => SettingsUI()),
-        //             );
-        //           },
-        //         ),
-        //       ),
-        //     ),
-
-        //     Padding(
-        //       padding: const EdgeInsets.all(8.0),
-        //       child: SettingsGroup(
-        //         items: [
-        //           SettingsItem(
-        //             onTap: () {
-        //               Navigator.push(
-        //                 context,
-        //                 MaterialPageRoute(builder: (context) => about()),
-        //               );
-        //             },
-        //             icons: Icons.info_rounded,
-        //             iconStyle: IconStyle(
-        //               backgroundColor: Color.fromARGB(255, 38, 71, 217)                 ),
-        //             title: 'About us',
-        //             subtitle: "Learn more about Cinematic Spree",
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //     // You can add a settings title
-        //     Padding(
-        //       padding: const EdgeInsets.all(8.0),
-        //       child: SettingsGroup(
-        //         settingsGroupTitle: "Account",
-        //         items: [
-        //           SettingsItem(
-        //             onTap: () {
-        //               Navigator.push(
-        //                 context,
-        //                 MaterialPageRoute(
-        //                     builder: (context) =>
-        //                         const SignInScreen()), ///////////
-        //               );
-        //             },
-        //             icons: Icons.exit_to_app_rounded,
-        //             title: "Sign In/Sign Up",
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-
-        //   ],
-        // )));
+  //
   }
 }

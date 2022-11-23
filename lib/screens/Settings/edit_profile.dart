@@ -36,7 +36,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             Icons.arrow_back,
             color: Colors.green,
           ),
-          onPressed: () { Navigator.of(context).push(MaterialPageRoute(
+          onPressed: () { Navigator.of(context).pop(MaterialPageRoute(
               builder: (BuildContext context) => HomePage()));},
         ),
         actions: [
