@@ -27,16 +27,12 @@ class contact extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
-
                 gradient: LinearGradient(
                   colors: [
                     // hexStringToColor("04619F"),
                     Colors.white70,
                     hexStringToColor("#923CB5"),
                     hexStringToColor("#000000"),
-
-
-                    // hexStringToColor("5E61F4")
                   ],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -57,7 +53,6 @@ class contact extends StatelessWidget {
                 githubUserName: 'sharjil-ali37',
                 linkedinURL: 'https://www.linkedin.com',
                 tagLine: 'Movie ticket booking App',
-
               ),
             ),
           )

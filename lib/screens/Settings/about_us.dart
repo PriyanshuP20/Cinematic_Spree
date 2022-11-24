@@ -71,7 +71,7 @@ class _AboutUsState extends State<AboutUs> {
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height / 2,
+                          height: MediaQuery.of(context).size.height / 2.5,
                           decoration: BoxDecoration(
                               color: Colors.white54,
                               border: Border.all(
@@ -103,8 +103,8 @@ class _AboutUsState extends State<AboutUs> {
                                       "This project aims to develop a back-end application for a movie ticket booking app using a graphical user interface. It allows for a flexible and user-friendly ticket booking interface. ",
                                       style: TextStyle(
                                       fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'Courier',
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'Arial Hebrew',
                                       color: Colors.black,
                                     ),
                                     textAlign: TextAlign.justify,

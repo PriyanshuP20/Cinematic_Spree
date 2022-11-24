@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'movie_index.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
-
 import '../../data/data.dart';
 
 class MovieListView extends StatefulWidget {
